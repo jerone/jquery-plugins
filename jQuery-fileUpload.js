@@ -42,7 +42,7 @@ $.extend($.fn, {
 					width: matchBtn.width,
 					height: matchBtn.height
 				});
-				//*/
+				*/
 				
 				if(between(matchTxt, mouse) || between(matchBtn, mouse)){
 					that.show().css({
