@@ -1,8 +1,9 @@
 $.extend($.fn, {
 	addRow : function(value){
-		var value = value || [], trs = [];
+		value = value || [];
+        var trs = [];
 		$(this).each(function(){
-			var tr = $(this), tds = i = 0;
+			var tr = $(this), tds = 0, i = 0;
 			switch(tr.context.nodeName.toLowerCase()){
 				case "table":
 					tr = tr.children("tbody");
@@ -22,7 +23,7 @@ $.extend($.fn, {
 			while(i<tds){
 				tr.append($("<td/>").html(value[i] || ""));
 				i++;
-			};
+			}
 			trs.push(tr);
 		});
 		return $(trs);
@@ -42,7 +43,7 @@ $.extend($.fn, {
 	addCol : function(value){
 		value = value || [];
 		return $(this).each(function(){
-			var table = $(this), tds = i = 0;
+			var table = $(this), tds = 0, i = 0;
 			switch(table.context.nodeName.toLowerCase()){
 				case "table":
 					table = table;
