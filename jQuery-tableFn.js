@@ -43,7 +43,7 @@ $.extend($.fn, {
 	addCol : function(value){
 		value = value || [];
 		return $(this).each(function(){
-			var table = $(this), tds = 0, i = 0;
+			var table = $(this);
 			switch(table.context.nodeName.toLowerCase()){
 				case "table":
 					table = table;
