@@ -5,7 +5,7 @@ $.extend($.fn, {
 				search = $("<input/>").css({color: "gray", paddingRight: 16}).val(text.input).bind("focus blur", function(){
 					if($(this).val()==text.input){
 						$(this).css("color", "").val("");
-					}else if($(this).val()==""){
+					}else if($(this).val()===""){
 						$(this).css("color", "gray").val(text.input);
 					}
 				}).insertBefore(targetTable).before(text.before).after(
@@ -19,7 +19,7 @@ $.extend($.fn, {
 						left: "-18px",
 						top: "2px",
 						cursor: "pointer"
-					}).click(function(event){
+					}).click(function(){
 						search.val("").keyup().blur();  // keyup needed for reset search;
 					})
 				).keyup(function(event){
