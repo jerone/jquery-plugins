@@ -9,7 +9,7 @@ $.extend($.fn, {
 			
 		var childrenIndex = 0;
 		var children = this.children();
-		if(children.length == 0){
+		if(children.length === 0){
 			children = this;
 		}
 		
@@ -33,7 +33,7 @@ $.extend($.fn, {
 			if(intervaller){
 				window.clearInterval(intervaller);
 			}
-		}
+		};
 		
 		var NextLine = function(){
 			Stop();
